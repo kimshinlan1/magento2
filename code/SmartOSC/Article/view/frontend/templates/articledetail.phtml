@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @var \SmartOSC\Article\Block\ArticleDetail $detail
+ */
+
+
+?>
+<table>
+    <tr>
+        <th class="post-id">Id</th>
+        <th class="post-name">Title</th>
+        <th></th>
+
+    </tr>
+    <?php
+
+    foreach ($block->getPostCollection() as $key => $article) {
+        echo '<tr>
+            <td> <?= $id[\'article_id\'] ?> </td>
+            <td> <?= $id[\'title\'] ?></td>
+            <td> <?= $id[\'content\']?></td>
+            <td> <?= $id[\'image\']?></td>
+            <td> <?= $id[\'created_at\']?> </td>
+            <td> <?= $id[\'updated_at\']?></td>
+        </tr>';
+    }
+    ?>
+    ?>

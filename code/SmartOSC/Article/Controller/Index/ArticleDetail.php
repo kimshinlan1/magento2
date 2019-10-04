@@ -4,10 +4,9 @@
 namespace SmartOSC\Article\Controller\Index;
 
 
-class Test extends \Magento\Framework\App\Action\Action
+class ArticleDetail extends \Magento\Framework\App\Action\Action
 {
     protected $_pageFactory;
-
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $pageFactory)
@@ -18,7 +17,6 @@ class Test extends \Magento\Framework\App\Action\Action
 
     public function execute()
     {
-        echo "Hello World";
-        exit;
+        return $this->_pageFactory->create();
     }
 }

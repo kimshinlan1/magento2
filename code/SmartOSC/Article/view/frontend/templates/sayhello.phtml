@@ -53,7 +53,8 @@ echo $block->sayHello();
     <tr>
         <th class="post-id">Id</th>
         <th class="post-name">Title</th>
-        <th>Content</th>
+        <th></th>
+
     </tr>
     <?php
     foreach ($block->getPostCollection() as $key => $article) {
@@ -61,7 +62,8 @@ echo $block->sayHello();
                     <td>' . $article['article_id'] . ' </td>
                    
                     <td>' . $article['title'] . '  </td>
-                    <td><div>' . $article['content'] . ' </div > <span class="detail"><button type="submit">DETAILS</button></span></td>
+                    
+        <td>       <a href = "http://localhost/mageno2/article/index/articledetail?id=<?php echo $post[\'article_id\'];?>">Article Detail</a></td>                   
                   </tr>';
     }
     ?>
